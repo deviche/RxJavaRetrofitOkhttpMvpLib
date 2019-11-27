@@ -1,6 +1,6 @@
 package com.example.gs.mvpdemo.model;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.example.gs.mvpdemo.ProApplication;
 import com.example.gs.mvpdemo.base.BaseModel;

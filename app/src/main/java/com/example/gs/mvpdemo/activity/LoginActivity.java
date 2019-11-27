@@ -1,25 +1,25 @@
 package com.example.gs.mvpdemo.activity;
 
-import android.support.v7.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatButton;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-
 import com.example.gs.mvpdemo.R;
 import com.example.gs.mvpdemo.base.BaseActivity;
 import com.example.gs.mvpdemo.contract.LoginContract;
 import com.example.gs.mvpdemo.presenter.LoginPresenter;
+import com.example.gs.mvpdemo.view.LoadingLayout;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginContract.LoginView {
 
-    @InjectView(R.id.input_email)   //账号
+    @BindView(R.id.input_email)   //账号
             EditText inputEmail;
-    @InjectView(R.id.input_password) //密码
+    @BindView(R.id.input_password) //密码
             EditText inputPassword;
-    @InjectView(R.id.btn_login)
+    @BindView(R.id.btn_login)
     AppCompatButton btnLogin;
 
     @Override
@@ -39,7 +39,11 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     protected void initView() {
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
+
+        //动态添加状态布局
+        LoadingLayout loadingLayout = LoadingLayout.wrap(this);
+        loadingLayout.showLoading();
     }
 
     @Override
