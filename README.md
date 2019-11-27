@@ -1,4 +1,8 @@
 # RxJavaRetrofitOkhttpMvp 再加上eventbus baseactivcity 和状态布局
+
+#已经拓展了其他功能，不要同步github的库
+
+
 时下流行的RxJava+Retrofit+Okhttp+Mvp封装的一个demo,简单,易理解,深度解耦,方便迭代,总之就是爽.
  >    RxJava+Retrofit+okhttp+mvp,现在流行这一套框架的封装,想着想着就自己封装了一套,并-且我们的项目的里面也这样用,方便以后的功能的迭代开发,产品需求的更改,有什么不足的地方,欢迎issues,如果你觉得有借鉴的地方,欢迎star.               
  
